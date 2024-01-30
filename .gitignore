@@ -397,3 +397,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 YoutubeChannel/YoutubeChannel.csproj
+YoutubeChannel/database/database.db
+YoutubeChannel/database/database.sqbpro

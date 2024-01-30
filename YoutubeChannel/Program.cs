@@ -1,4 +1,4 @@
-namespace YoutubeChannel;
+namespace YoutubeChannel.MVP.View.Main;
 
 static class Program
 {
