@@ -1,5 +1,4 @@
 using System.Data.SQLite;
-using System.Data;
 
 namespace YoutubeChannel.Services
 {
@@ -12,17 +11,14 @@ namespace YoutubeChannel.Services
             this._pathConnection = $"DataSource={Directory.GetCurrentDirectory()}{pathConnection};Version=3;Pooling=True;";
         }
 
-        public SQLiteConnection GetConnection()
-        {
-            return new SQLiteConnection(_pathConnection);
-        }
+        public SQLiteConnection GetConnection() => new SQLiteConnection(_pathConnection);
 
         public void CreateTablesIFNotExist()
         {
             string[] querys = new string[2];
 
-            querys[0] = "CREATE TABLE IF NOT EXISTS user ( name TEXT, weight TEXT, Id INTEGER )";
-            querys[1] = "CREATE TABLE IF NOT EXISTS water ( date TEXT UNIQUE, month TEXT NOT NULL, consumid TEXT )";
+            querys[0] = "CREATE TABLE IF NOT EXISTS CurrentUser (userName TEXT, subscrivers TEXT, date INTEGER)";
+            querys[1] = "CREATE TABLE IF NOT EXISTS Login (email TEXT, password TEXT, userName TEXT, inscritos TEXT, date TEXT)";
         
             using (SQLiteConnection connection = this.GetConnection())
             {
