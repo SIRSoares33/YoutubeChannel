@@ -1,6 +1,7 @@
 using YoutubeChannel.Services;
 using YoutubeChannel.MVP.Presenter.Main;
 using YoutubeChannel.MVP.Model.Main;
+using YoutubeChannel.MVP.View.Login;
 
 namespace YoutubeChannel.MVP.View.Main;
 
@@ -14,6 +15,10 @@ public partial class MainView : Form, IMainView
     public MainView()
     {
         InitializeComponent();
+
+        LoginView loginView = new LoginView();
+        loginView.ShowDialog();
+
         _presenter = new MainPresenter(this, new DbManager(@"\database\database.db"), new MainModel());
     }
     #endregion
