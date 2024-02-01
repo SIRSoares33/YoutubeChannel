@@ -38,6 +38,8 @@ public class LoginPresenter
 
             if (!_model.Login(_database, _view.Email, _view.Password))
                 throw new Exception("Sua conta não foi encontrada.");
+
+            _view.ThisForm.Close();
         }
         catch(Exception ex)
         {
