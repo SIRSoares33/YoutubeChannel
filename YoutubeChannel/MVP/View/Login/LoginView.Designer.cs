@@ -33,7 +33,6 @@
             lblSenha = new Label();
             txtPassword = new TextBox();
             btnLogin = new Button();
-            btnCadastro = new Button();
             SuspendLayout();
             // 
             // lblEmail
@@ -74,7 +73,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(21, 115);
+            btnLogin.Location = new Point(89, 114);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(82, 39);
             btnLogin.TabIndex = 4;
@@ -82,22 +81,11 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += SendingLoginButton;
             // 
-            // btnCadastro
-            // 
-            btnCadastro.Location = new Point(120, 115);
-            btnCadastro.Name = "btnCadastro";
-            btnCadastro.Size = new Size(112, 39);
-            btnCadastro.TabIndex = 5;
-            btnCadastro.Text = "Não tenho conta";
-            btnCadastro.UseVisualStyleBackColor = true;
-            btnCadastro.Click += SendingCadastroButton;
-            // 
             // LoginView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(274, 178);
-            Controls.Add(btnCadastro);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblSenha);
@@ -116,6 +104,5 @@
         private Label lblSenha;
         private TextBox txtPassword;
         private Button btnLogin;
-        private Button btnCadastro;
     }
 }

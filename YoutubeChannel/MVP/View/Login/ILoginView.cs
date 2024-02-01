@@ -11,13 +11,13 @@ namespace YoutubeChannel.MVP.View.Login
         /// </summary>
         string Password { get; }
         /// <summary>
+        /// Form Atual para ser manipulado na presenter.
+        /// </summary>
+        LoginView ThisForm { get; }
+        /// <summary>
         /// Evento do botão de login.
         /// </summary>
         event Action? ButtonLoginWasClicked;
-        /// <summary>
-        /// Evento do botão de cadastro.
-        /// </summary>
-        event Action? ButtonCadastroWasClicked;
         /// <summary>
         /// Exibe uma mensagem para a view.
         /// </summary>

@@ -19,13 +19,13 @@ public partial class LoginView : Form, ILoginView
     #endregion
 
     #region ILoginView Attributes
-    public string Email    { get => txtEmail.Text;    }
-    public string Password { get => txtPassword.Text; }
+    public string Email       { get => txtEmail.Text;    }
+    public string Password    { get => txtPassword.Text; }
+    public LoginView ThisForm { get => this;             }
     #endregion
 
     #region ILoginView Events
     public event Action? ButtonLoginWasClicked;
-    public event Action? ButtonCadastroWasClicked;
     #endregion
 
     #region ILoginView Methods
@@ -35,6 +35,5 @@ public partial class LoginView : Form, ILoginView
 
     #region Methods
     private void SendingLoginButton(object sender, EventArgs e)    => ButtonLoginWasClicked?.Invoke();
-    private void SendingCadastroButton(object sender, EventArgs e) => ButtonCadastroWasClicked?.Invoke();
     #endregion
 }
