@@ -20,6 +20,7 @@ public class MainPresenter
 
         _database = database;
         _database.CreateTablesIFNotExist();
+        _database.ExecuteNonQuery("DELETE FROM CurrentUser");
 
         _model = model;
 
